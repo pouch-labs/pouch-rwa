@@ -1,0 +1,21 @@
+{
+  "policy": {
+    "dailyBudgetUsd": 1000,
+    "tiers": {
+      "official": { "enabled": true, "maxPerTradeUsd": 500 },
+      "issuer": { "enabled": true, "maxPerTradeUsd": 250 },
+      "established": { "enabled": true, "maxPerTradeUsd": 100 },
+      "unknown": { "enabled": false, "maxPerTradeUsd": 0 }
+    },
+    "minHolders": 1000,
+    "denylist": [],
+    "trustedIssuers": [],
+    "stocks": { "blockOffHoursTrades": false },
+    "transfers": {
+      "enabled": false,
+      "maxPerTransferUsd": 100,
+      "dailyBudgetUsd": 250,
+      "allowlist": []
+    }
+  }
+}

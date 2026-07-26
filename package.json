@@ -1,0 +1,62 @@
+{
+  "name": "pouch-rwa",
+  "version": "0.1.0",
+  "description": "pouch: an RWA trading wallet for AI agents on Robinhood Chain. SDK + MCP server with built-in guardrails for autonomous tokenized-stock trading.",
+  "type": "module",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "pouch-rwa": "dist/mcp.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/mcp.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "rwa",
+    "tokenized-stocks",
+    "mcp",
+    "mcp-server",
+    "sdk",
+    "robinhood-chain",
+    "agentic-trading",
+    "autonomous-trading",
+    "ai-agents",
+    "wallet",
+    "uniswap-v4"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "viem": "^2.21.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pouch-labs/pouch-rwa.git"
+  },
+  "homepage": "https://github.com/pouch-labs/pouch-rwa#readme",
+  "bugs": {
+    "url": "https://github.com/pouch-labs/pouch-rwa/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "pouch.config.example.json"
+  ]
+}
